@@ -1,2 +1,0 @@
-!function(){var t={form:document.querySelector("#task-form")};function r(t){var r={};return new FormData(t.currentTarget).forEach((function(t,e){r[e]=t})),r}var e={add:function(t){var r=JSON.parse(localStorage.getItem("ls-k"))||[];r.push(t),localStorage.setItem("ls-k",JSON.stringify(r))}};t.form.addEventListener("submit",(function(t){t.preventDefault();var a=r(t);console.log(a),e.add(a)}))}();
-//# sourceMappingURL=index.540e43a0.js.map
