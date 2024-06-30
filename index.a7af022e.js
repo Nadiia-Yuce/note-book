@@ -1,0 +1,2 @@
+const t={form:document.querySelector("#task-form")};function e(t){const e={};return new FormData(t.currentTarget).forEach(((t,o)=>{e[o]=t})),e}const o={add:function(t){const e=JSON.parse(localStorage.getItem("ls-k"))||[];e.push(t),localStorage.setItem("ls-k",JSON.stringify(e))}};t.form.addEventListener("submit",(function(t){t.preventDefault();const n=e(t);console.log(n),o.add(n)}));
+//# sourceMappingURL=index.a7af022e.js.map
