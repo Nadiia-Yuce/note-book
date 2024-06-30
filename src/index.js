@@ -16,5 +16,7 @@
  */
 import { refs } from './js/refs';
 import { handlerSubmit } from './js/handlerSubmit';
+import { renderCards } from './js/renderCards';
 
 refs.form.addEventListener('submit', handlerSubmit);
+renderCards();
