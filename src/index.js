@@ -5,6 +5,7 @@ import { createProductsMarkup } from './services/markupService';
 import { refs } from './refs';
 import { handlerSingleProductSubmit } from './handlerSingleProductSubmit';
 import { handlerNewProductSubmit } from './handlerNewProductSubmit';
+import {handlerDeletionProductForm} from "./handlerDeletionProductForm.js";
 
 async function renderProducts() {
   try {
@@ -24,3 +25,4 @@ refs.singleProductForm.addEventListener('submit', handlerSingleProductSubmit);
 
 // post newProduct
 refs.newProduct.addEventListener('submit', handlerNewProductSubmit);
+refs.deletionProductForm.addEventListener('submit', handlerDeletionProductForm);

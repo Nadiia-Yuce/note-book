@@ -11,3 +11,8 @@ export async function getProductById(id) {
 export async function createNewProduct(obj) {
   return (await apiInstance.post('/products/add', obj)).data;
 }
+
+
+export async function deleteProductById(id) {
+  return await apiInstance.delete(`/products/${id}`);
+}
