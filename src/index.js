@@ -3,6 +3,7 @@ import './styles/index.css';
 import { getAllProducts } from './requests/products';
 import { createProductsMarkup } from './services/markupService';
 import { refs } from './refs';
+import { handlerSingleProductSubmit } from './handlerSingleProductSubmit';
 
 async function renderProducts() {
   try {
@@ -16,4 +17,6 @@ async function renderProducts() {
   }
 }
 
-renderProducts();
+// renderProducts();
+
+refs.singleProductForm.addEventListener('submit', handlerSingleProductSubmit);
