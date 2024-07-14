@@ -7,3 +7,7 @@ export async function getAllProducts() {
 export async function getProductById(id) {
   return (await apiInstance.get(`/products/${id}`)).data;
 }
+
+export async function createNewProduct(obj) {
+  return (await apiInstance.post('/products/add', obj)).data;
+}
