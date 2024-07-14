@@ -5,12 +5,15 @@ import { createProductsMarkup } from './services/markupService';
 import { refs } from './refs';
 
 async function renderProducts() {
-  const allProducts = await getAllProducts();
-  refs.allProducts.insertAdjacentHTML(
-    'beforeend',
-    createProductsMarkup(allProducts.products)
-  );
-  console.log(allProducts);
+  try {
+    const allProducts = await getAllProducts();
+    refs.allProducts.insertAdjacentHTML(
+      'beforeend',
+      createProductsMarkup(allProducts.products)
+    );
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 renderProducts();
