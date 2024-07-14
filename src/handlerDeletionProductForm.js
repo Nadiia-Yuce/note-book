@@ -1,6 +1,5 @@
 import {deleteProductById} from "./requests/products.js";
 
-
 export async function handlerDeletionProductForm(event) {
   try {
     event.preventDefault();
